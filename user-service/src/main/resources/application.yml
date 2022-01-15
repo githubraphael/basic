@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: user-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/phiz_db?authSource=admin&readPreference=primary
+  mail:
+    transport:
+      protocol: smtp
+    from:
+      email: phizlive2021@gmail.com
+    host: smtp.gmail.com
+    port: 587
+    username: phizlive2021@gmail.com
+    password: "@PhizT0k3n"
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+            required: true
+          auth: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+
+server:
+  port: 7001
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+jwt:
+  secret: phiz_secret
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        

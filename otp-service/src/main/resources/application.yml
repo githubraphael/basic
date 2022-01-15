@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: otp-service
+
+server:
+  port: 7002
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+twillo:
+  account_sid: AC3502fcaedcc1580ca8117cdc5e44b205
+  auth_token: 878926635f7b152405df5f2c1b3b6aeb
+  msg_sid: MG1066bba627e428482e39a30a1d8932a3
+
+otp:
+  expires: 5
